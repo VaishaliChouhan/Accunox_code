@@ -1,16 +1,3 @@
-# Django Signals and Python Custom Class - Questions and Answers
-
-## Question 1: Are Django signals executed synchronously or asynchronously by default?
-
-*Answer:*  
-Django signals are executed *synchronously* by default.
-
-*Explanation:*  
-When a Django signal is sent (e.g., during a model save), all connected signal handlers are executed *immediately* in the same thread. The calling code *waits* until each signal handler finishes before continuing.
-
-*Code Example:*
-
-python
 # models.py
 from django.db import models
 
